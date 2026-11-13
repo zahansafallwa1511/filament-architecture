@@ -2,7 +2,7 @@
   filament-architecture — portable rules for AI coding assistants that read AGENTS.md
   (or similar instruction files). Copy this section into your project's AGENTS.md,
   .github/copilot-instructions.md, a .cursor/rules/*.mdc file, or your tool's equivalent.
-  Full guide: https://github.com/sajibjahan/filament-architecture
+  Full guide: https://github.com/zahansafallwa1511/filament-architecture
 -->
 
 ## Architecture: business logic stays out of Filament

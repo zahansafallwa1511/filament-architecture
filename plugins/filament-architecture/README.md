@@ -11,6 +11,6 @@ See the [repository README](../../README.md) for installation and details.
 ## Install
 
 ```
-/plugin marketplace add sajibjahan/filament-architecture
+/plugin marketplace add zahansafallwa1511/filament-architecture
 /plugin install filament-architecture@filament-architecture
 ```
