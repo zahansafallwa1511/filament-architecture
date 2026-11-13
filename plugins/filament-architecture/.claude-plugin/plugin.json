@@ -1,0 +1,10 @@
+{
+  "name": "filament-architecture",
+  "version": "0.1.0",
+  "description": "Keep business logic out of Filament (v4/v5): thin resources and actions, framework-free use cases, Pest arch tests and an audit script.",
+  "author": {
+    "name": "Mohammad Sajib Jahan"
+  },
+  "license": "MIT",
+  "keywords": ["laravel", "filament", "clean-architecture", "use-cases", "ddd", "php"]
+}

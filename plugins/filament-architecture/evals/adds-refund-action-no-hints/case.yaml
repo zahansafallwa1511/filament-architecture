@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: adds-refund-action-no-hints
+expected_outcome: |
+  With no architecture hints in the project, the run still keeps the Filament action thin: a
+  RefundPayment use case holds the remaining-amount check, the 60-day window (from an injected
+  Clock) and the status calculation; Stripe is reached through a gateway interface implemented in
+  Infrastructure by wrapping the existing StripeClient; a migration creates the refunds table; a
+  test covers the rejection rules with a fake gateway; the chosen strictness mode is stated.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: adds-approve-action-strict
+expected_outcome: |
+  An ApproveOrder use case under app/Application with an Input DTO, strict mode (no Eloquent,
+  facades or helpers), the pending-only rule enforced in the domain, time from the Clock interface,
+  approver id passed in, customer email sent through a Domain interface implemented in
+  Infrastructure and bound in DomainServiceProvider, a migration for the new columns, a thin
+  Filament table action that maps input and handles DomainException, and a fast unit test with fakes.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,6 @@
+{
+    "packages": [
+        {"name": "filament/filament", "version": "v4.2.0"},
+        {"name": "laravel/framework", "version": "v12.33.0"}
+    ]
+}

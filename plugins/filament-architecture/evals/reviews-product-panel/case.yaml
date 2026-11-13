@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: reviews-product-panel
+expected_outcome: |
+  review.md (strict mode, from CLAUDE.md) flags: restock action writing stock and calling the
+  warehouse over HTTP in Filament; the discount bulk action changing prices in Filament;
+  infrastructure inside DiscontinueProduct (DB::transaction, now(), auth(), Log, App\Models in
+  strict mode); hidden business logic in ProductObserver; the discontinue visible() rule duplicated
+  from the use case. It does not report reads (navigation badge, filter), SKU normalisation or UI
+  notifications as violations, changes no code, and ends with a prioritised plan.
+context:
+  scaffold_script: place-files.sh

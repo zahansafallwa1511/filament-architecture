@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: refactors-leave-request-pragmatic
+expected_outcome: |
+  The run detects pragmatic mode from the existing RegisterEmployee use case that uses Eloquent,
+  extracts submit/approve/reject leave use cases into app/Application, moves working-day counting
+  and the balance check out of CreateLeaveRequest, replaces the free status select with explicit
+  approve/reject actions, sends mail/notifications through interfaces implemented in
+  Infrastructure, preserves existing behaviour, and raises behavioural quirks (e.g. double balance
+  deduction on re-approval, no balance re-check at approval) as questions instead of silently fixing them.
+context:
+  scaffold_script: place-files.sh

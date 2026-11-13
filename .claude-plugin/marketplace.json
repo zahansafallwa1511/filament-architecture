@@ -1,0 +1,17 @@
+{
+  "name": "filament-architecture",
+  "owner": {
+    "name": "Mohammad Sajib Jahan"
+  },
+  "metadata": {
+    "description": "Claude Code skills for clean architecture in Laravel and Filament apps."
+  },
+  "plugins": [
+    {
+      "name": "filament-architecture",
+      "source": "./plugins/filament-architecture",
+      "description": "Keep business logic out of Filament (v4/v5): thin resources and actions, framework-free use cases, Pest arch tests and an audit script.",
+      "category": "development"
+    }
+  ]
+}

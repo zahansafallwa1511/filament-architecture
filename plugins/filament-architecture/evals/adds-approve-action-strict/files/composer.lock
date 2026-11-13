@@ -1,0 +1,10 @@
+{
+    "packages": [
+        {"name": "filament/filament", "version": "v4.1.3"},
+        {"name": "laravel/framework", "version": "v12.30.1"},
+        {"name": "livewire/livewire", "version": "v3.6.4"}
+    ],
+    "packages-dev": [
+        {"name": "pestphp/pest", "version": "v3.8.2"}
+    ]
+}
