@@ -1,6 +1,6 @@
 # Filament Architecture: a Claude skill
 
-A Claude Code plugin (and claude.ai skill) that teaches Claude to keep **business logic out of Filament** in Laravel apps. Filament resources, pages and actions stay thin. Rules, calculations and side effects go into **use case classes** that contain no infrastructure: no facades, no global helpers, no HTTP and no Filament. In strict mode they contain no Eloquent either.
+A Claude Code plugin (and claude.ai skill) that teaches Claude to keep **business logic out of Filament** in Laravel apps. It also works with other AI assistants: see [Other AI assistants](#other-ai-assistants-codex-cursor-copilot-). Filament resources, pages and actions stay thin. Rules, calculations and side effects go into **use case classes** that contain no infrastructure: no facades, no global helpers, no HTTP and no Filament. In strict mode they contain no Eloquent either.
 
 Supports **Filament v4 and v5**.
 
@@ -46,6 +46,16 @@ Then just work normally ("add a refund action to the payments table"). The skill
 
 1. Download `plugins/filament-architecture/skills/filament-architecture` as a zip (or grab it from Releases).
 2. Go to **Settings → Capabilities → Skills → Upload skill**.
+
+### Other AI assistants (Codex, Cursor, Copilot, …)
+
+The skill is written for Claude, but the architecture isn't Claude-specific. Pick whichever option your tool supports:
+
+1. **Agent Skills support.** The skill folder uses the open Agent Skills format (`SKILL.md` plus `references/` and `scripts/`). If your assistant supports skills, copy `plugins/filament-architecture/skills/filament-architecture` into its skills directory. The location varies by tool, so check its docs.
+2. **`AGENTS.md` / instruction files.** Copy the section in [`agents/AGENTS.md`](agents/AGENTS.md) into your project's `AGENTS.md`, or into your tool's instruction file (`.github/copilot-instructions.md`, a `.cursor/rules/*.mdc` rule, and so on). It's a condensed, self-contained version of the rules. Set the `Use case mode:` line to `strict` or `pragmatic`.
+3. **Enforcement, whoever writes the code.** Add the Pest arch tests (see `references/scaffolding.md`) and, optionally, the audit script to CI. They fail the build when business logic or infrastructure ends up in the wrong layer, whether a person, Claude or any other assistant wrote it.
+
+Option 2 loses the "load detailed guides only when needed" behaviour that skills have. The rules still apply, but the assistant sees fewer worked examples, so options 1 and 3 give the most consistent results.
 
 ## The audit script
 
